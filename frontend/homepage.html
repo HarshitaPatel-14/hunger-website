@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>End Hunger</title>
+    <link rel="stylesheet" href="homepage.css">
+</head>
+<body>
+
+    <!--Navbar Section-->
+
+    <nav class="navbar">
+        <div class="logo">Your Logo</div>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+            <li><a href="#nearby-ngos">Nearby NGOs</a></li>
+            <li><a href="#donate">Donate</a></li>
+        </ul>
+    </nav>
+    
+    <div class="content">
+        <h1>Welcome to Our Website</h1>
+        <p>Explore our services and connect with NGOs around you.</p>
+    </div>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="carousel">
+            <div class="carousel-item active" style="background-image: url('image1.jpg');"></div>
+            <div class="carousel-item" style="background-image: url('image2.jpg');"></div>
+            <div class="carousel-item" style="background-image: url('image3.jpg');"></div>
+        </div>
+        <div class="hero-content">
+            <h1>Hungry? They Are Too.</h1>
+            <p>Every day, tons of food goes to waste while millions go to sleep hungry. HUNGRY is here to change that. Whether you have extra food to share, know where surplus food is available, or want to help distribute meals to those in need—this is your platform to make a difference.</p>
+            <div class="button-group">
+                <a href="donate.html" class="btn btn-green">Donate</a>
+                <a href="nearby-ngos.html" class="btn btn-orange">Nearby NGOs</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Info Cards -->
+    <section class="info-section">
+        <div class="info-card">
+            <h3>Scan & Donate Surplus Food</h3>
+            <p>Restaurants and food businesses can easily donate surplus food by scanning and listing items.</p>
+        </div>
+        <div class="info-card">
+            <h3>Share Your Own Meals</h3>
+            <p>Have extra home-cooked meals? Donate them to those in need.</p>
+        </div>
+        <div class="info-card">
+            <h3>Report Nearby NGOs</h3>
+            <p>Know a food-donating NGO nearby? Report its location to help others.</p>
+        </div>
+        <div class="info-card">
+            <h3>Get Food Assistance</h3>
+            <p>If you're facing food insecurity, find available food donations near you.</p>
+        </div>
+        <div class="info-card">
+            <h3>Help Someone in Need</h3>
+            <p>Connect with those in need and assist them in accessing food donations.</p>
+        </div>
+        <div class="info-card">
+            <h3>Live GPS Map of Food Resources</h3>
+            <p>Use our GPS map to locate nearby food-donating NGOs and individuals willing to share food.</p>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section class="about" id="about">
+        <h3 class="about-title">ABOUT US</h3>
+        <h2>Ending Hunger, One Meal At A Time</h2>
+        <p>
+            At Hungry, we believe that no one should go to bed hungry. Our platform bridges 
+            the gap between surplus food and those who need it most. Whether you're an 
+            individual looking for a meal or a donor wanting to make a difference, we make it 
+            easy to share and receive food with dignity.
+        </p>
+        <p>
+            Our mission is simple: Reduce food waste. Feed the hungry. Build a 
+            compassionate community. Join us in creating a world where no meal goes to 
+            waste and no one goes unfed.
+        </p>
+        <p>
+            Together, we can make hunger a thing of the past.
+        </p>
+        <p class="impact">
+            👉 <strong>Donate. Receive. Make an impact.</strong>
+        </p>
+    </section>
+
+    <!-- Contact Form -->
+    <section class="contact" id="contact">
+        <h2>Reach Out - Make a Difference</h2>
+        <form onsubmit="submitForm(event)">
+            <input type="text" placeholder="First Name" required>
+            <input type="text" placeholder="Last Name" required>
+            <input type="email" placeholder="Email Address" required>
+            <input type="text" placeholder="Phone Number" required>
+            <textarea placeholder="Write your message here..." required></textarea>
+            <button type="submit" class="btn send">Send</button>
+        </form>
+        </section>
+        <!--Footer-->
+    <footer class="footer" id="footer">
+        <p>Sign up for our free Good Health Newsletter</p>
+        <div class="newsletter">
+            <input type="email" placeholder="Enter your email address">
+            <button>Send</button>
+        </div>
+        <p>By clicking Subscribe, you agree to our <a href="#">Terms & Conditions</a> and <a href="#">Privacy Policy</a>.</p>
+        <div class="social-icons">
+            <a href="#"><img src="facebook-icon.png" alt="Facebook"></a>
+            <a href="#"><img src="twitter-icon.png" alt="Twitter"></a>
+            <a href="#"><img src="instagram-icon.png" alt="Instagram"></a>
+        </div>
+        <p>
+            <a href="#">Privacy Policy</a> | 
+            <a href="#">Cookie Policy</a> | 
+            <a href="#">Editorial Policy</a> | 
+            <a href="#">Terms of Use</a>
+        </p>
+        <p>© 2025 Meals4You. All rights reserved.</p>
+    </footer>
+
+</body>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    let index = 0;
+    const slides = document.querySelectorAll(".carousel-item");
+
+    function changeSlide() {
+        slides.forEach((slide, i) => {
+            slide.classList.remove("active");
+            slide.style.opacity = "0"; // Hide previous slides
+        });
+
+        slides[index].classList.add("active");
+        slides[index].style.opacity = "1"; // Show active slide
+
+        index = (index + 1) % slides.length;
+    }
+
+    setInterval(changeSlide, 3000);
+});
+
+// Handle Form Submission (Optional)
+function submitForm(event) {
+    event.preventDefault(); // Prevent default form submission
+    alert("Your message has been sent!");
+}
+</script>
+
+<!-- JavaScript for Mobile Menu -->
+<script>
+    function toggleMenu() {
+        document.getElementById('menu').classList.toggle('active');
+    }
+</script>
+
+<!--JS for scroll-->
+<script>
+    document.querySelectorAll('nav a').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            const targetId = this.getAttribute('href'); 
+            if (targetId.startsWith("#")) {  
+                e.preventDefault();
+                document.querySelector(targetId).scrollIntoView({
+                    behavior: "smooth"
+                });
+            }
+        });
+    });
+    </script>
+    
+
+</html>

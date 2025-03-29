@@ -1,0 +1,92 @@
+/* Donation Page Styling */
+.donation-form {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 35px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.donation-form h2 {
+    font-size: 2.2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.donation-form p {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+/* Form Styling */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.input-group {
+    text-align: left;
+}
+
+label {
+    font-size: 1rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: block;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    background: #f9f9f9;
+    transition: 0.3s ease;
+}
+
+input:focus, textarea:focus {
+    border-color: #28a745;
+    background: #fff;
+    outline: none;
+}
+
+textarea {
+    resize: none;
+}
+
+/* Submit Button */
+button {
+    padding: 10px;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: white;
+    background: #28a745;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #218838;
+    transform: scale(1.02);
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .donation-form {
+        max-width: 90%;
+        padding: 20px;
+    }
+
+    button {
+        font-size: 0.9rem;
+        padding: 10px;
+    }
+}
